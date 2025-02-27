@@ -3,9 +3,9 @@
     gap: 30px;
     justify-content: center;
     align-items: center;
-    padding: 50px 50px;
+    padding: 20px 50px;
     min-height: 100vh; 
-    margin-top: 80px;
+    margin-top: 40px;
     background-color: #f4f4f4;
 }
 .checkout h2{
@@ -32,7 +32,7 @@
     padding: 20px 20px;
     border-radius: 10px;
     width: 50%; 
-    height: 650px;
+    height: 630px;
 }
 
 .order-summary-item {
