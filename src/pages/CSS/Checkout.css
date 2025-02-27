@@ -3,11 +3,14 @@
     gap: 30px;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
+    min-height: 80vh; 
     padding: 150px;
     background-color: #f4f4f4;
 }
-
+.checkout h2{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
 .checkout-content {
     display: flex;
     flex-direction: column; 
