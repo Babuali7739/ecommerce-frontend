@@ -15,9 +15,9 @@ export const CartItems = () => {
     <div className='cartitems'>
         <div className="cartitems-format-main">
             <p>Products</p>
-            <p>Title</p>
+            <p className='total'>Title</p>
             <p>Price</p>
-            <p>Quantity</p>
+            <p>Qty</p>
             <p>Total</p>
             <p>Remove</p>
         </div>
@@ -31,7 +31,7 @@ export const CartItems = () => {
                     <p>{e.name}</p>
                     <p>${e.new_price}</p>
                     <button className='cartitems-quantity'>{cartItems[e.id]}</button>
-                    <p>${e.new_price*cartItems[e.id]}</p>
+                    <p className='total'>${e.new_price*cartItems[e.id]}</p>
                     <img src={remove_icon} onClick={()=>{removeFromCart(e.id)}} alt="" />
                 </div>
                 <hr />
