@@ -39,10 +39,10 @@ export const ProductDisplay = (props) => {
             </div>
             <div className="productdisplay-right-prices">
                 <div className="productdisplay-right-price-old">
-                    &#8377;{product.old_price}
+                &#8377;{product.old_price}
                 </div>
                 <div className="productdisplay-right-price-new">
-                    &#8377;{product.new_price}
+                &#8377;{product.new_price}
                 </div>
             </div>
             <div className="productdisplay-right-description">
@@ -54,7 +54,7 @@ export const ProductDisplay = (props) => {
                 {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
                             <div
                                 key={size}
-                                className={`size-option &#8377;{selectedSize === size ? 'selected' : ''}`}
+                                className={`size-option ${selectedSize === size ? 'selected' : ''}`}
                                 onClick={() => handleSizeClick(size)}
                             >
                                 {size}

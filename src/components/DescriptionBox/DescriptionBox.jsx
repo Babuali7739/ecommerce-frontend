@@ -12,11 +12,11 @@ export const DescriptionBox = () => {
     <div className='descriptionbox'>
         <div className="descriptionbox-navigator">
             <div 
-            className={`descriptionbox-nav-box &#8377;{activeTab === 'description' ? 'active' : ''}`}
+            className={`descriptionbox-nav-box ${activeTab === 'description' ? 'active' : ''}`}
             onClick={() => handleTabClick('description')}>
               Dexcription</div>
               <div
-                className={`descriptionbox-nav-box &#8377;{activeTab === 'reviews' ? 'active' : ''}`}
+                className={`descriptionbox-nav-box ${activeTab === 'reviews' ? 'active' : ''}`}
                  onClick={() => handleTabClick('reviews')}
                 >
               Reviews(130)</div>

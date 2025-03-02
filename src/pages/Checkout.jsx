@@ -26,7 +26,7 @@ const Checkout = () => {
                     description: 'Thank you for your purchase',
                     image: 'https://yourstorelogo.com/logo.png', // Replace with your logo URL
                     handler: function (response) {
-                        alert(`Payment successful. Payment ID: &#8377;{response.razorpay_payment_id}`);
+                        alert(`Payment successful. Payment ID: ${response.razorpay_payment_id}`);
                         // Handle payment success logic here
                     },
                     prefill: {
