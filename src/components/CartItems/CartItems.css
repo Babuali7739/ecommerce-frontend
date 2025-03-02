@@ -1,5 +1,6 @@
 .cartitems{
     margin: 140px 170px;
+    margin-bottom: -30px;
 
 }
 .cartitems hr{
@@ -53,13 +54,14 @@
     padding: 15px 0px;
 }
 .cartitems-total button{
-    width: 260px;
-    height: 58px;
+    width: 250px;
+    height: 50px;
     outline: none;
     border: none;
     background: #ff5a5a;
+    border-radius: 10px;
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
 }.cartitems-promocode{
@@ -74,23 +76,26 @@
 .cartitems-promobox{
     width: 504px;
     margin-top: 15px;
+    border-radius: 10px;
     padding-left: 20px;
-    height: 58px;
+    height: 50px;
     background: #eaeaea;
 }
 .cartitems-promobox input{
     border: none;
     outline: none;
     background: transparent;
+    border-radius: 10px;
     font-size: 16px;
     width: 330px;
     height: 50px;
 }
 .cartitems-promobox button{
     width: 170px;
-    height: 58px;
+    height: 50px;
     font-size: 16px;
     background-color: black;
+    border-radius: 10px;
     color: white;
     cursor: pointer;
 }

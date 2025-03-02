@@ -6,10 +6,53 @@ import { BiColor } from 'react-icons/bi';
 const Checkout = () => {
     const { cartItems, all_product, getTotalCartAmount } = useContext(ShopContext);
 
-    // Calculate the discount (if you want to add any discount logic)
-    const discount = 10; // Example: 10% discount
+    const discount = 10; 
     const totalAmount = getTotalCartAmount();
     const discountedAmount = totalAmount - (totalAmount * discount / 100);
+    const loadRazorpay = () => {
+        const script = document.createElement("script");
+        script.src = "https://checkout.razorpay.com/v1/checkout.js";
+        script.onerror = () => {
+            alert("Razorpay SDK failed to load. Are you online?");
+        };
+        script.onload = async () => {
+            try {
+                // Initialize the payment options
+                const options = {
+                    key: 'rzp_live_aySnE0krMpP3SU', // Replace with your Razorpay key
+                    amount: (discountedAmount * 100).toFixed(0), // Convert amount to paise (Razorpay uses smallest currency unit)
+                    currency: 'INR',
+                    name: 'Your Store Name',
+                    description: 'Thank you for your purchase',
+                    image: 'https://yourstorelogo.com/logo.png', // Replace with your logo URL
+                    handler: function (response) {
+                        alert(`Payment successful. Payment ID: ${response.razorpay_payment_id}`);
+                        // Handle payment success logic here
+                    },
+                    prefill: {
+                        name: "Customer Name",
+                        email: "customer@example.com",
+                        contact: "9999999999"
+                    },
+                    notes: {
+                        address: "Your Store Address"
+                    },
+                    theme: {
+                        color: "#3399cc"
+                    }
+                };
+
+                // Create a new Razorpay object and open the checkout
+                const paymentObject = new window.Razorpay(options);
+                paymentObject.open();
+            } catch (error) {
+                console.error("Payment error:", error);
+                alert("Something went wrong with the payment process.");
+            }
+        };
+        document.body.appendChild(script);
+    };
+
 
     return (
         <div className="checkout">
@@ -50,7 +93,7 @@ const Checkout = () => {
                         </select>
                     </div>
                 </form>
-                <button className="checkout-btn">Place Order</button>
+                <button className="checkout-btn" onClick={loadRazorpay}>Place Order</button>
             </div>
 
             {/* Order Summary */}
