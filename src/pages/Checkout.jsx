@@ -19,7 +19,7 @@ const Checkout = () => {
             try {
                 // Initialize the payment options
                 const options = {
-                    key: 'rzp_live_aySnE0krMpP3SU', // Replace with your Razorpay key
+                    key: 'rzp_test_1G3zjvb0t8AKyR', // Replace with your Razorpay key
                     amount: (discountedAmount * 100).toFixed(0), // Convert amount to paise (Razorpay uses smallest currency unit)
                     currency: 'INR',
                     name: 'Your Store Name',
