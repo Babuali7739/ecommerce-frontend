@@ -51,7 +51,7 @@ export const Navbar = () => {
         </div>
         <IoIosMenu onClick={openmenu} className='menubar'/>
         {isMenuOpen && (
-                <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+                <div className={`mobile-menu &#8377;{isMenuOpen ? 'open' : ''}`}>
                     <ul>
                         <li onClick={() => { setMenu("shop"); openmenu(); }}><Link to='/' style={{ textDecoration: 'none' }}>Shop</Link></li>
                         <li onClick={() => { setMenu("mens"); openmenu(); }}><Link to='/mens' style={{ textDecoration: 'none' }}>Men</Link></li>

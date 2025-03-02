@@ -26,7 +26,7 @@ const Checkout = () => {
                     description: 'Thank you for your purchase',
                     image: 'https://yourstorelogo.com/logo.png', // Replace with your logo URL
                     handler: function (response) {
-                        alert(`Payment successful. Payment ID: ${response.razorpay_payment_id}`);
+                        alert(`Payment successful. Payment ID: &#8377;{response.razorpay_payment_id}`);
                         // Handle payment success logic here
                     },
                     prefill: {
@@ -118,8 +118,8 @@ const Checkout = () => {
                                     {/* Product Details */}
                                     <span>{product.name}</span>
                                     <span>{cartItems[product.id]}</span>
-                                    <span>${product.new_price}</span>
-                                    <span>${(product.new_price * cartItems[product.id]).toFixed(2)}</span>
+                                    <span>&#8377;{product.new_price}</span>
+                                    <span>&#8377;{(product.new_price * cartItems[product.id]).toFixed(2)}</span>
                                 </div>
                             );
                         }
@@ -127,7 +127,7 @@ const Checkout = () => {
                     })}
                     <hr />
                     <div className="order-total">
-                        <h3>Total Amount: ${totalAmount.toFixed(2)}</h3>
+                        <h3>Total Amount: &#8377;{totalAmount.toFixed(2)}</h3>
                     </div>
                 </div>
                 
@@ -137,17 +137,17 @@ const Checkout = () => {
                     <h2>Discount & Final Total</h2>
                     <div className="order-summary-final">
                         <p>Subtotal:</p>
-                        <p>${totalAmount.toFixed(2)}</p>
+                        <p>&#8377;{totalAmount.toFixed(2)}</p>
                     </div>
                     <div className="order-summary-final">
                         <p>Discount({discount}%):</p>
-                        <p style={{color:'green'}}>-${(totalAmount * discount / 100).toFixed(2)}
+                        <p style={{color:'green'}}>-&#8377;{(totalAmount * discount / 100).toFixed(2)}
                         </p>
                     </div>
                     <hr />
                     <div className="order-summary-final">
                         <h3>Final-Amount:</h3>
-                        <h3 style={{color:'green'}}>${discountedAmount.toFixed(2)}</h3>
+                        <h3 style={{color:'green'}}>&#8377;{discountedAmount.toFixed(2)}</h3>
                     </div>
                 </div>
         </div>

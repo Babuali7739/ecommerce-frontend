@@ -20,7 +20,7 @@ export const LoginSign = () => {
     // Email validation
     if (!formData.email) {
       newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+&#8377;/.test(formData.email)) {
       newErrors.email = "Invalid email format";
     }
 

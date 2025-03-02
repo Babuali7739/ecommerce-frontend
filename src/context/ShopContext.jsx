@@ -41,7 +41,7 @@ const ShopContextProvider = (props) =>{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
-                    'auth-token':`${localStorage.getItem('auth-token')}`,
+                    'auth-token':`&#8377;{localStorage.getItem('auth-token')}`,
                     'Content-Type':'application/json'
                 },
                 body:"",
@@ -58,7 +58,7 @@ const ShopContextProvider = (props) =>{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
-                    'auth-token':`${localStorage.getItem('auth-token')}`,
+                    'auth-token':`&#8377;{localStorage.getItem('auth-token')}`,
                     'Content-Type':'application/json'
                 },
                 body:JSON.stringify({"itemId":itemId}),
@@ -73,7 +73,7 @@ const ShopContextProvider = (props) =>{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
-                    'auth-token':`${localStorage.getItem('auth-token')}`,
+                    'auth-token':`&#8377;{localStorage.getItem('auth-token')}`,
                     'Content-Type':'application/json'
                 },
                 body:JSON.stringify({"itemId":itemId}),
